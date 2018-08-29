@@ -1,18 +1,18 @@
 import React from 'react';
 
-export default function CreateContact() {
+export default function CreateContact(props) {
   return (
-    <form className="CreateContact" id="CreateContact">
-      <label for="name-entry" aria-label="name-entry">Name: </label>
-      <input type="text" id="name-entry" name="name-entry" placeholder="Jane Doe" required />
+    <form className="CreateContact" id="CreateContact" onSubmit={props.onSubmit}>
+      <label htmlFor="name" aria-label="name">Name: </label>
+      <input type="text" id="name" name="name" placeholder="Jane Doe" onChange={props.onChange} required />
       <br />
-      <label for="phone-entry" aria-label="phone-entry">Phone Number: </label>
-      <input type="tel" id="phone-entry" name="name-entry" placeholder="777-777-7777" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+      <label htmlFor="number" aria-label="number">Phone Number: </label>
+      <input type="tel" id="number" name="number" placeholder="777-777-7777" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" onChange={props.onChange} required />
       <br />
-      <label for="email" aria-label="email">Email: </label>
-      <input type="email" id="email" name="email" placeholder="jane.doe@thinkful.com" />
+      <label htmlFor="email" aria-label="email">Email: </label>
+      <input type="email" id="email" name="email" placeholder="jane.doe@thinkful.com" onChange={props.onChange} />
       <br />
-      <button type="submit" form="CreateContact" value="Submit">Submit</button>
+      <button type="submit" form="CreateContact" value="Submit" >Submit</button>
     </form>
   )
 }

@@ -22,14 +22,37 @@ export default class UserInterface extends React.Component {
             "number": "999-999-9999",
             "email": "jshmoe@thinkful.com"
         }
-      ]
+      ],
+      name: '',
+      number: '',
+      password: ''
     }
+  }
+  
+  onChange(e) {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  }
+
+  onSubmit(e) {
+    e.preventDefault();
+    console.log('onSubmit ran');
+    const newContact = {
+      name: this.state.name,
+      number: this.state.number,
+      email: this.state.email
+    };
+
+    this.setState({
+      contacts: [...this.state.contacts, newContact]
+    });
   }
   
   render() {
     return (
       <div className="UserInterface">
-        <CreateContact />
+        <CreateContact onChange={(e) => {this.onChange(e)}} onSubmit={(e) => {this.onSubmit(e)}} />
         <ContactList contacts={this.state.contacts} />
       </div>
     )
