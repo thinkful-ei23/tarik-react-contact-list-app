@@ -1,0 +1,17 @@
+[
+    {
+        "name": "John Doe",
+        "number": "555-555-5555",
+        "email": "jdoe@thinkful.com"
+    },
+    {
+        "name": "Jane Doe",
+        "number": "777-777-7777",
+        "email": "jane.doe@thinkful.com"
+    },
+    {
+        "name": "Joe Shmoe",
+        "number": "999-999-9999",
+        "email": "jshmoe@thinkful.com"
+    }
+]

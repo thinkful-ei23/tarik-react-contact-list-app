@@ -1,0 +1,5 @@
+1. UserInterface (root component)
+    *Pending: AddContact Button (Renders CreateContact form)*
+    CreateContact (form for creating new contact)
+    ContactList (Contact list display, UL of contacts)
+
